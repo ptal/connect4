@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "column-win1",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "1\n 2\n 1\n 2\n 1\n 2\n 1\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "row-win1",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "1\n 1\n 2\n 2\n 3\n 3\n 4\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "row-win2",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "1\n 1\n 2\n 2\n 3\n 3\n 3\n 4\n 5\n 4\n",
+      "output": "winner Player 2",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "overflow-column",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 1\n 2\n 2\n 3\n 3\n 4\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "overflow-row1",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "0\n 8\n 1\n 1\n 2\n 2\n 3\n 3\n 4\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "overflow-row2",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "0\n 8\n 7\n 1\n 6\n 2\n 5\n 3\n 3\n 4\n",
+      "output": "winner Player 2",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "row-win6",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "1\n 2\n 2\n 3\n 3\n 3\n 4\n 2\n 4\n 4\n 1\n",
+      "output": "winner Player 1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "draw",
+      "setup": "mvn compile",
+      "run": "timeout 10s mvn exec:java -Dexec.mainClass=\"connect4.Connect4\"",
+      "input": "1\n 1\n 1\n 1\n 1\n 1\n 3\n 3\n 3\n 3\n 3\n 3\n 5\n 5\n 5\n 5\n 5\n 5\n 6\n 6\n 6\n 6\n 6\n 6\n 7\n 4\n 4\n 4\n 4\n 4\n 4\n 7\n 7\n 7\n 7\n 7\n 2\n 2\n 2\n 2\n 2\n 2\n",
+      "output": "draw",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
